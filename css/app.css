@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.wrapper{
+    background-color: ghostwhite;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    place-content: space-around;
+    place-items: center;
+    padding: min(2rem, 10%);
+}
+
+.nav_item{
+    display: flex;
+    place-content:space-around;
+    place-items: start;
+    gap:1rem;
+}
+
+.nav_link{
+    text-decoration: none;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.btn__group{
+    width:60% ;
+    flex-basis: 60%;
+    padding: min(2rem, 10%);
+    background-color: #eee;
+    display: flex;
+    gap: 2rem;
+    place-content: space-between;
+    flex-wrap:wrap;
+}
+
+.btn__primary{
+    background-color: rgb(4, 4, 88);
+    color: azure;
+    font-weight: normal;
+    font-size: 1rem; 
+    padding: min(.6rem, 15%);
+    cursor:pointer;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn__seconary{
+    background-color: rgb(180, 9, 9);
+    color: azure;
+    font-weight: normal;
+    font-size: 1rem; 
+    border:none;
+    padding: min(.6rem, 15%);
+    cursor:pointer;
+    border-radius: 10px;
+}
+
+.btn_dom-sample{
+    width:60%;
+    display: flex;
+    place-content: space-between;
+    place-items: center;
+    gap: 1.2rem;
+    padding: min(1.5rem, 10%);
+    /* background-color:rgb(180, 9, 9); */
+    background: transparent;
+}
+
+.btn_sample, .btn__subscribe{
+    padding:.5rem;
+    background:rgb(180, 9, 9);
+    font-weight: normal;
+    font-size: 1rem;
+    padding: 1.3rem;
+     border:none;
+     border:none;
+     border-radius: 10px;
+    /* color:rgb(6, 0, 0); */
+    color:white;
+}
+
+.is_subscribed, .isbtn_sample{
+    background-color:#eee;
+    color:black;
+}
+
+.shipping_panel{
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    margin:1rem auto;
+    background-color:#eee;
+    place-content: space-around;
+    place-items: center;
+    padding:min(1.5rem, 16%);
+    gap:2rem;
+}
+
+.inputElems{
+    padding:.9rem;
+    border-radius: 5px;
+}
+
+.cal__btn{
+    background: rgb(4, 27, 35);
+    color:rgb(249, 241, 241);
+    border:none;
+    /* padding:min(.2rem, 15%); */
+    border-radius:5px;
+}
+
+.cost_screen{
+    margin:.3rem auto;
+}
+
+/* todoList */
+.todo_name_input,
+.btn_todo{
+    padding:min(.5rem, 10%);
+}
+
+.todoList_box{
+    display: flex;
+    /* flex-direction: column; */
+    width:70%;
+    place-content:center;
+    place-items: center;
+    text-align: center;
+    margin:.3rem auto;
+    gap:.2rem;
+}
