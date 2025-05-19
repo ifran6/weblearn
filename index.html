@@ -9,41 +9,45 @@
 <body>
     <div class="wrapper">
         <div class="nav_item">
-             <a href="index.html" class="nav_link">Home</a> <a href="todo.html" class="nav_link">Task</a>
-             <a href="ad_fxn.html" class="nav_link">Advance FXN</a>
-        </div>
+            <a href="index.html" class="nav_link">Home</a> <a href="todo.html" class="nav_link">Task</a>
+            <a href="ad_fxn.html" class="nav_link">Advance FXN</a>
+            <a href="product.html" class="nav_link">Products</a>
+       </div>
 
-        <p class="app-title">
-            Rock Paper Scissor
-        </p>
-
-        <div class="btn__group">
-            <button class="btn__primary" onclick="randomGenerateNum();">Rock</button>
-            <button class="btn__primary" onclick="">Paper</button>
-            <button class="btn__primary" onclick="messageAlert()">Scissors</button>
-            <button class="btn__seconary" onclick="calculateTax10()">Calculate Tax</button>
-            <button class="btn__seconary" onclick="calculateTaxParams(250000)">Calculate Tax</button>
-             <button class="btn__seconary" onclick="productJsonTest()">Object to Jsson</button>
-             <button class="btn__seconary" onclick="convertToJavaScript()">To JavaScript</button>
-              <button class="btn__seconary" onclick="localStorageJs()">localStorageJs</button>
-        </div>
-
-        <div class="btn_dom-sample">
-            <button type="button" class="btn_sample" onclick="clickSample()">Check Dom</button>
-            <button type="button" class="btn__subscribe" onclick="subscribehandler()"> Subscribe</button>
-        </div>
-
-
-        <div class="shipping_panel">
-            <p>Shipping Calculator</p>
-           
-            <div> 
+        
+        <main class="main_wrapper">
+            <p class="app-title">
+                Rock Paper Scissor
+            </p>
+    
+            <div class="btn__group">
+                <button class="btn__primary" onclick="randomGenerateNum();">Rock</button>
+                <button class="btn__primary" onclick="">Paper</button>
+                <button class="btn__primary" onclick="messageAlert()">Scissors</button>
+                <button class="btn__seconary" onclick="calculateTax10()">Calculate Tax</button>
+                <button class="btn__seconary" onclick="calculateTaxParams(250000)">Calculate Tax</button>
+                 <button class="btn__seconary" onclick="productJsonTest()">Object to Jsson</button>
+                 <button class="btn__seconary" onclick="convertToJavaScript()">To JavaScript</button>
+                  <button class="btn__seconary" onclick="localStorageJs()">localStorageJs</button>
+            </div>
+    
+            <div class="btn_dom-sample">
+                <button type="button" class="btn_sample" onclick="clickSample()">Check Dom</button>
+                <button type="button" class="btn__subscribe" onclick="subscribehandler()"> Subscribe</button>
+            </div>
+    
+    
+            <div class="shipping_panel">
+                <p>Shipping Calculator</p>
                
-                <input type="text" class="inputElems cost_Order" placeholder="Cost of Order" onkeydown="typeHandler()" >
-                <button class="inputElems cal__btn" onclick="calculatorHandler()">Calculate</button>
-            </div> <span class="cost_screen"></span>
-        </div>
+                <div> 
+                   
+                    <input type="text" class="inputElems cost_Order" placeholder="Cost of Order" onkeydown="typeHandler()" >
+                    <button class="inputElems cal__btn" onclick="calculatorHandler()">Calculate</button>
+                </div> <span class="cost_screen"></span>
+            </div>
+        </main>
     </div>
-    <script src="js/app.js"></script>
+    <script src="js/scripts/app.js"></script>
 </body>
 </html>

@@ -210,7 +210,7 @@ console.log(`sum of the array value ${result}`);
 // advance function
 
 setTimeout(function(){
-    alert('SetTimeOut Testing');
+    console.log('SetTimeOut Testing');
 }, 1000);
 
 // setInterval(function(){
