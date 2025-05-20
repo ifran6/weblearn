@@ -160,8 +160,18 @@ document.querySelectorAll('.add-to-cart-button').forEach((button) => {
       productMsg.innerHTML = `
         <h3>Cart Items</h3> <hr>
         <div>${cartHTML}</div>`;
-  
-      console.log(cart);
+
+        // getting the total cart quantity
+        let cartQuantity = 0;
+    cart.forEach((item)=>{
+      cartQuantity += item.quantity;
+      // console.log(`Total Qty: ${cartQuantity}`);
+      // console.log(cart);
     });
+  
+     document.querySelector('.cart-count').innerText = cartQuantity;
+    });
+    
   });
   
+ 
