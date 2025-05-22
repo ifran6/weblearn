@@ -1,27 +1,30 @@
-
+import {cart, addToCart} from '../data/cart.js';
 const products = [
-    {image:'images/product-img.jpg',
+    {id:1,
+      image:'images/product-img.jpg',
      name:'T-shirt',
     //  rating:{stars:4.5, count:4},
       rating:{stars_img:'images/ratings/page_white_stack.png', count:3},
      priceCents:1090,
     },
 
-    {image:'images/product-img.jpg',
+    {id:2,
+      image:'images/product-img.jpg',
         name:'Shoes and Bag',
        //  rating:{stars:4.5, count:4},
          rating:{stars_img:'images/ratings/page_white_stack.png', count:2},
         priceCents:1090,
        },
 
-    {image:'images/product-img.jpg',
+    {id:3,
+      image:'images/product-img.jpg',
         name:'Top',
         // rating:{stars:2.5, count:3},
         rating:{stars_img:'images/ratings/page_white_stack.png', count:4},
         priceCents:1080,
     },
 
-    {
+    { id:4,
         image:'images/product-img.jpg',
         name:'Trousers',
         // rating:{stars:3.5, count:4},
@@ -29,14 +32,15 @@ const products = [
         priceCents:1090,
        },
    
-       {image:'images/product-img.jpg',
+       {id:5,
+        image:'images/product-img.jpg',
            name:'Gown',
         //    rating:{stars:2.5, count:3},
         rating:{stars_img:'images/ratings/page_white_stack.png', count:5},
            priceCents:1080,
        },
 
-       {
+       {id:6,
         image:'images/product-img.jpg',
         name:'Head Ties',
        //  rating:{stars:4.5, count:4},
@@ -44,7 +48,7 @@ const products = [
         priceCents:1050,
        },
 
-       {
+       {id:7,
         image:'images/product-img.jpg',
         name:'Jacket & Shirt',
         // rating:{stars:3.5, count:4},
@@ -52,7 +56,7 @@ const products = [
         priceCents:1090,
        },
 
-       {
+       {id:8,
         image:'images/product-img.jpg',
         name:'Suit',
         // rating:{stars:3.5, count:4},
@@ -60,7 +64,7 @@ const products = [
         priceCents:1090,
        },
 
-       {
+       {id:9,
         image:'images/product-img.jpg',
         name:'Cap',
         // rating:{stars:3.5, count:4},
@@ -68,7 +72,7 @@ const products = [
         priceCents:1090,
        },
 
-       {
+       {id:10,
         image:'images/product-img.jpg',
         name:'Heart',
         // rating:{stars:3.5, count:4},
@@ -94,6 +98,7 @@ products.forEach((product)=>{
             <div class="product_details">
             <div class="product-name">
                 <p>${product.name}</p>
+                
             </div>
 
             <div class="product-rating-container">
@@ -114,52 +119,22 @@ products.forEach((product)=>{
 
             </div>
 
-            <button class="add-to-cart-button" data-product-name="${product.name}"
+            <button class="add-to-cart-button" data-product-id="${product.id}"
               data-product-price="${product.priceCents}" 
               >Add to Cart </button>
          </div> `
 });
 
 productsGrid.innerHTML = productsHTML;
-console.log(productsHTML);
+// console.log(productsHTML);
+
 
 document.querySelectorAll('.add-to-cart-button').forEach((button) => {
     button.addEventListener('click', () => {
-      const productName = button.dataset.productName;
+      const productId = button.dataset.productId;
       const productPrice = parseFloat(button.dataset.productPrice); // Convert to number
   
-      let matchingItem;
-  
-      // Check if product already exists in cart
-      cart.forEach((item) => {
-        if (item.productName === productName) {
-          matchingItem = item;
-        }
-      });
-  
-      // Increase quantity if product exists, else add new item
-      if (matchingItem) {
-        matchingItem.quantity += 1;
-      } else {
-        cart.push({
-          productName: productName,
-          quantity: 1,
-          productPrice: productPrice,
-        });
-      }
-  
-      // Update cart display
-      let productMsg = document.querySelector('.product-message');
-  
-      // Format the cart items as HTML
-      let cartHTML = cart.map(item => {
-        return `<p class='product-table'>Product Name: ${item.productName} | Qty: ${item.quantity} | Price: $${(item.productPrice * item.quantity).toFixed(2)}</p>`;
-      }).join('');
-  
-      // Display cart
-      productMsg.innerHTML = `
-        <h3>Cart Items</h3> <hr>
-        <div>${cartHTML}</div>`;
+        addToCart(productId, productPrice);
 
         // getting the total cart quantity
         let cartQuantity = 0;
